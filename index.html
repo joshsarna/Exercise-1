@@ -9,7 +9,7 @@
     <p>{{ randomNumber() }}</p>
     <!-- 4) Search any image on Google and output it here by binding the "src" attribute -->
     <div>
-        <img style="width:100px;height:100px" src="https://cosmos-magazine.imgix.net/file/spina/photo/9849/duckling.jpg?fit=clip&w=835">
+        <img style="width:100px;height:100px" v-bind:src="imageUrl">
     </div>
     <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
     <div>
@@ -23,7 +23,8 @@
 
         data: {
             name: 'Josh',
-            age: 23
+            age: 23,
+            imageUrl: "https://cosmos-magazine.imgix.net/file/spina/photo/9849/duckling.jpg?fit=clip&w=835"
         },
 
         methods: {
